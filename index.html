@@ -1,96 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaForge — Futuristic website templates & AI solutions</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="index.html"><span>Nova</span>Forge</a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="create.html">Create</a>
-          <a href="ai.html">AI</a>
-          <a href="shop.html">Shop</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
-      </header>
-
-      <main class="hero-panel home-hero">
-        <div class="hero-copy reveal-on-scroll">
-          <p class="eyebrow">Futuristic digital launchpad</p>
-          <h1>Sell smart templates and AI website solutions with clarity.</h1>
-          <p>Launch polished web experiences, shop creative bundles, and choose custom AI tools that feel serene, translucent, and modern.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="create.html">Create your website</a>
-            <a class="btn btn-secondary" href="shop.html">Browse the shop</a>
-          </div>
-        </div>
-
-        <aside class="hero-card reveal-on-scroll">
-          <div class="hero-card__tag">New launch</div>
-          <h2>Glassy website systems for ambitious brands.</h2>
-          <p>Templates designed to feel premium, simple, and forward-looking with layered transparency and graceful motion.</p>
-          <div class="hero-card__stats">
-            <div>
-              <strong>5</strong>
-              <span>Template styles</span>
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aetheris AI Architecture | Architecting the Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Geist:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#424754",
+                    "on-surface-variant": "#c2c6d6",
+                    "outline": "#8c909f",
+                    "error-container": "#93000a",
+                    "primary-container": "#4d8eff",
+                    "on-tertiary-container": "#272a2c",
+                    "surface-container-highest": "#2d3449",
+                    "on-surface": "#dae2fd",
+                    "secondary-fixed": "#acedff",
+                    "inverse-surface": "#dae2fd",
+                    "on-secondary-fixed": "#001f26",
+                    "on-primary-fixed-variant": "#004395",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-variant": "#2d3449",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "surface": "#0b1326",
+                    "on-primary-fixed": "#001a42",
+                    "secondary-container": "#03b5d3",
+                    "surface-container": "#171f33",
+                    "surface-container-high": "#222a3d",
+                    "primary": "#adc6ff",
+                    "on-error": "#690005",
+                    "secondary": "#4cd7f6",
+                    "inverse-primary": "#005ac2",
+                    "tertiary-container": "#8e9193",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary": "#003640",
+                    "on-primary": "#002e6a",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "background": "#0b1326",
+                    "on-secondary-container": "#00424e",
+                    "on-primary-container": "#00285d",
+                    "surface-bright": "#31394d",
+                    "inverse-on-surface": "#283044",
+                    "surface-container-low": "#131b2e",
+                    "surface-container-lowest": "#060e20",
+                    "on-background": "#dae2fd",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary": "#2d3133",
+                    "surface-tint": "#adc6ff",
+                    "tertiary": "#c4c7c9",
+                    "surface-dim": "#0b1326",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "tertiary-fixed": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-desktop": "120px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "section-padding-mobile": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Geist"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-glow-primary {
+            text-shadow: 0 0 20px rgba(173, 198, 255, 0.3);
+        }
+        .bg-glow-gradient {
+            background: radial-gradient(circle at center, rgba(76, 215, 246, 0.15) 0%, transparent 70%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tight">
+                Aetheris AI
             </div>
-            <div>
-              <strong>AI</strong>
-              <span>Boost tools</span>
-            </div>
-          </div>
-        </aside>
-      </main>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md hover:opacity-80 transition-all scale-95 active:scale-90 transition-transform">
+                Start Project
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<!-- Background Animation Placeholder -->
+<div class="absolute inset-0 z-0">
 
-      <section class="feature-grid">
-        <article class="feature-block reveal-on-scroll">
-          <h2>Simple system, premium finish</h2>
-          <p>Every template is curated for speed, responsive structure, and a fluid futuristic edge without visual noise.</p>
-        </article>
-        <article class="feature-block reveal-on-scroll">
-          <h2>AI workflows built in</h2>
-          <p>Turn content prompts, image ideas, and SEO copy into polished pages with guided AI support.</p>
-        </article>
-        <article class="feature-block reveal-on-scroll">
-          <h2>Shop, customize, launch</h2>
-          <p>Choose a package, connect a domain, and start selling or publishing in a few focused steps.</p>
-        </article>
-      </section>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-dim/0 via-surface-dim/50 to-surface-dim"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span class="font-label-md text-label-md uppercase tracking-widest">Next-Gen Architecture</span>
+</div>
+<h1 class="font-display-lg text-display-lg leading-[1.1] tracking-tight text-white">
+                        Architecting the <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">Future</span> of Web &amp; AI
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        High-performance websites and intelligent AI agents designed to scale your business with mathematical precision and artistic vision.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform flex items-center group">
+                            View Web Services
+                            <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="px-8 py-4 glass-panel text-secondary rounded-xl font-label-md text-label-md font-bold border border-secondary/30 hover:bg-secondary/10 transition-colors">
+                            Explore AI Agents
+                        </button>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="relative z-10 animate-float">
+<div class="glass-panel p-4 rounded-3xl overflow-hidden shadow-2xl">
+<img class="rounded-2xl w-full h-[500px] object-cover" data-alt="A futuristic, high-tech 3D abstract visualization of a neural network intertwined with architectural blueprints. The aesthetic is dark and sophisticated, with neon cyan and electric blue light trails illuminating a deep obsidian glass surface. Cinematic lighting creates sharp highlights and soft, moody shadows, reflecting a premium AI agency brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLhhwxcRAsRQWBN19kQNQ879XsxEKB7y1eQgkdvlAhMZlUZ_nfqeDa-d17uYLAhCohnUmsnQWPR2Q5zNohP1VtQl6E62eK4rsKAPEi9CeeZseelVM9CmhaVk2QURSDSOFBMw3rsjGli6SpULMrlEZicKePydV9nj3F27gV3khDLSaL4pR0B0lvVk64TdkuAbBkIm5IUE-GNemBhkKPub5WJyVtxK4S3ZfaqkMG8906Tq1uOaUTpaxgt5Nx8WKL6T42MPkLAumy-bs">
+</div>
+</div>
+<!-- Glow effects -->
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary/20 rounded-full blur-[80px]"></div>
+</div>
+</div>
+</section>
+<!-- Core Services -->
+<section class="py-section-padding-desktop max-w-container-max mx-auto px-8 relative">
+<div class="text-center mb-20 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-white">Core Capabilities</h2>
+<div class="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    We bridge the gap between complex backend intelligence and stunning front-end experiences.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Web Dev Card -->
+<div class="glass-panel group p-10 rounded-[2.5rem] relative overflow-hidden transition-all hover:-translate-y-2">
+<div class="absolute top-0 right-0 p-8 text-white/5 group-hover:text-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">web_asset</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Bespoke Web Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Beyond simple sites. We build custom, high-performance web architectures using Next.js and headless stacks, optimized for conversion and massive scale.
+                        </p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Sub-second load times &amp; Core Web Vitals</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Enterprise-grade security standards</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Seamless third-party API integrations</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- AI Agent Card -->
+<div class="glass-panel group p-10 rounded-[2.5rem] relative overflow-hidden transition-all hover:-translate-y-2 border-primary/20">
+<div class="absolute top-0 right-0 p-8 text-white/5 group-hover:text-secondary/10 transition-colors">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[32px]">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white">Autonomous AI Agents</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Custom LLM implementations and autonomous workflows that handle customer service, sales, and data analysis while you sleep.
+                        </p>
+<ul class="space-y-3 font-label-md text-label-md text-on-surface">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Custom-tuned RAG pipelines</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Multi-modal agent capabilities</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Internal operational automation</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-surface-container-lowest py-section-padding-desktop relative">
+<div class="max-w-container-max mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-white">Our Methodical Process</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            From initial strategy to global deployment, we follow a rigorous engineering framework designed for transparency and results.
+                        </p>
+</div>
+<div class="flex items-center space-x-4 pb-2">
+<div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-on-surface-variant">01</div>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-on-surface-variant">04</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap- gutter">
+<!-- Step 1 -->
+<div class="space-y-6 relative group">
+<div class="text-6xl font-bold text-outline-variant group-hover:text-primary transition-colors duration-500">01</div>
+<h4 class="font-headline-md text-[24px] text-white">Discovery &amp; Strategy</h4>
+<p class="font-body-md text-on-surface-variant">We map your business architecture and identify AI leverage points.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Step 2 -->
+<div class="space-y-6 relative group">
+<div class="text-6xl font-bold text-outline-variant group-hover:text-primary transition-colors duration-500">02</div>
+<h4 class="font-headline-md text-[24px] text-white">Architecture Design</h4>
+<p class="font-body-md text-on-surface-variant">Prototyping data flows and UI systems for optimal performance.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Step 3 -->
+<div class="space-y-6 relative group">
+<div class="text-6xl font-bold text-outline-variant group-hover:text-primary transition-colors duration-500">03</div>
+<h4 class="font-headline-md text-[24px] text-white">Parallel Engineering</h4>
+<p class="font-body-md text-on-surface-variant">Front-end development and AI training happen in synced sprints.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Step 4 -->
+<div class="space-y-6 relative group">
+<div class="text-6xl font-bold text-outline-variant group-hover:text-primary transition-colors duration-500">04</div>
+<h4 class="font-headline-md text-[24px] text-white">Deployment &amp; Scale</h4>
+<p class="font-body-md text-on-surface-variant">Global edge launch with 24/7 autonomous monitoring.</p>
+<div class="h-1 w-0 bg-primary group-hover:w-full transition-all duration-700"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Bento Section -->
+<section class="py-section-padding-desktop max-w-container-max mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 glass-panel rounded-[3rem] p-12 flex flex-col justify-between relative overflow-hidden min-h-[400px]">
+<div class="absolute inset-0 z-0">
 
-      <section class="wide-cta reveal-on-scroll">
-        <div>
-          <span class="eyebrow">Focus</span>
-          <h2>Build a storefront that feels like tomorrow.</h2>
-          <p>Minimal controls, crisp typography, and subtle translucency keep the experience modern and approachable.</p>
-        </div>
-        <a class="glass-link" href="create.html">Start a project</a>
-      </section>
-
-      <footer class="site-footer reveal-on-scroll">
-        <p>NovaForge — website templates and AI solutions for modern creators.</p>
-        <div class="footer-links">
-          <a href="shop.html">Shop</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </footer>
-    </div>
-
-    <div class="mobile-menu" aria-hidden="true">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="create.html">Create</a>
-        <a href="ai.html">AI</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="close-menu">Close menu</button>
-    </div>
-  </body>
-</html>
+</div>
+<div class="relative z-10 space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-white">Ready to automate your excellence?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-lg">Join 50+ industry leaders who have already transformed their digital infrastructure with Aetheris.</p>
+<button class="px-10 py-5 bg-white text-surface-dim rounded-2xl font-bold hover:scale-105 transition-transform">Schedule a Consultation</button>
+</div>
+</div>
+<div class="bg-primary-container rounded-[3rem] p-12 flex flex-col justify-between text-on-primary-container">
+<span class="material-symbols-outlined text-[64px]">diversity_3</span>
+<div>
+<div class="text-5xl font-bold mb-2">99.9%</div>
+<p class="font-label-md opacity-80 uppercase tracking-widest">Uptime for AI Ops</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-16 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-8 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Aetheris AI</div>
+<p class="text-on-surface-variant font-body-md">Architecting high-end digital solutions for the innovators of tomorrow.</p>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-bold font-label-md">Company</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Resources</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-white font-bold font-label-md">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-white font-bold font-label-md">Newsletter</h5>
+<div class="flex">
+<input class="bg-surface-container border-none rounded-l-xl w-full focus:ring-1 focus:ring-primary text-on-surface" placeholder="Email Address" type="email">
+<button class="bg-primary text-on-primary px-4 rounded-r-xl">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-8 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant font-body-md">© 2024 Aetheris AI Architecture. All rights reserved.</p>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">hub</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">language</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for smooth scrolling or hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

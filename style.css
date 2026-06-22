@@ -113,11 +113,25 @@ button {
 }
 
 .hero-panel {
+  position: relative;
   display: grid;
   grid-template-columns: 1.3fr 0.9fr;
   gap: 32px;
   align-items: center;
   padding: 48px 0 32px;
+}
+
+#home-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+#home-hero canvas {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
 }
 
 .hero-copy {
@@ -284,6 +298,53 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(18px);
+}
+
+.instruction-panel {
+  margin-top: 48px;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.instruction-panel h2 {
+  font-size: 1.75rem;
+  margin-bottom: 18px;
+}
+
+.instruction-panel p,
+.instruction-panel li {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.instruction-panel ul {
+  margin: 18px 0 24px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.instruction-panel code {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.instruction-panel pre {
+  margin: 0;
+  padding: 18px;
+  overflow-x: auto;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.instruction-panel code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
 }
 
 .wide-cta h2 {
