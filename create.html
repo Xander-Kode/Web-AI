@@ -149,8 +149,8 @@
 <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary glow-accent"></div>
 <div class="absolute top-1/2 right-1/4 w-96 h-96 bg-secondary glow-accent"></div>
 <!-- Hero Section -->
-<section id="vanta-hero" class="relative max-w-[1280px] mx-auto px-8 mb-[120px]">
-<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<section id="vanta-hero" class="relative w-full overflow-hidden min-h-[720px] mb-[120px]">
+<div class="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto px-8 py-20">
 <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-label-md text-label-md mb-6">
 <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
                     Next-Gen Web Architecture
@@ -371,14 +371,14 @@
 <script>
         VANTA.CLOUDS({
             el: "#vanta-hero",
-            mouseControls: true,
+            mouseControls: false,
             touchControls: true,
             gyroControls: false,
             minHeight: 200.00,
             minWidth: 200.00,
-            skyColor: 0x0b1326,
-            cloudColor: 0x4cd7f6,
-            backgroundColor: 0x071020
+            skyColor: 0x94c8e3,
+            cloudColor: 0xd7d1d1,
+            backgroundColor: 0xffffff
         });
 
         // Smooth scroll for internal links

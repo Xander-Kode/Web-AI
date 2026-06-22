@@ -126,12 +126,22 @@ button {
   z-index: 1;
 }
 
-#home-hero canvas {
+#home-hero canvas,
+#vanta-hero canvas {
   position: absolute !important;
   inset: 0;
   width: 100% !important;
   height: 100% !important;
   z-index: 0;
+}
+
+#vanta-hero {
+  position: relative;
+}
+
+#vanta-hero .relative.z-10 {
+  position: relative;
+  z-index: 10;
 }
 
 .hero-copy {
