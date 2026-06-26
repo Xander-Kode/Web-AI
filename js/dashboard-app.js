@@ -12,7 +12,7 @@ async function init() {
   const { data: { session } } = await db.auth.getSession();
   if (!session) { window.location.href = 'login.html'; return; }
   currentUser = session.user;
-  document.getElementById('user-email').textContent = currentUser.email;
+  document.getElementById('user-email').textContent = currentUser.user_metadata?.display_name || currentUser.email;
   loadClients();
 }
 
