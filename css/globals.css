@@ -413,6 +413,8 @@ p { margin: 0; }
   gap: 16px;
 }
 .footer-bottom p { color: var(--on-surface-muted); font-size: 16px; }
+.admin-link { color: rgba(255,255,255,0.18); font-size: 12px; text-decoration: none; transition: color 0.2s; }
+.admin-link:hover { color: var(--on-surface-muted); }
 .footer-social { display: flex; gap: 24px; }
 .footer-social a { color: var(--on-surface-muted); transition: color 180ms; }
 .footer-social a:hover { color: var(--primary); }
