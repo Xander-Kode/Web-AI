@@ -1,0 +1,143 @@
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+.ai-hero {
+  position: relative;
+  min-height: 716px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 32px;
+}
+.ai-hero-inner {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 896px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.ai-hero-inner h1 { color: #fff; }
+.ai-hero-actions { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+/* ── Bento Grid ────────────────────────────────────────────────────────── */
+.ai-bento {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--gap);
+}
+.ai-card {
+  padding: 40px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ai-card-large { grid-column: 1; }
+.ai-card-small { grid-column: 2; justify-content: space-between; }
+.ai-card-full  { grid-column: 1 / -1; }
+.ai-card-icon  { font-size: 36px; margin-bottom: 24px; display: block; }
+.ai-card-glow {
+  position: absolute;
+  right: -80px; bottom: -80px;
+  width: 256px; height: 256px;
+  border-radius: 50%;
+  background: rgba(173,198,255,0.1);
+  filter: blur(100px);
+  pointer-events: none;
+  transition: opacity 500ms;
+}
+.ai-card:hover .ai-card-glow { opacity: 2; }
+.ai-feature-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.ai-feature-list li { display: flex; align-items: center; gap: 12px; color: var(--on-surface); font-size: 16px; line-height: 24px; }
+.ai-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+.ai-dot-primary   { background: var(--primary); }
+.ai-dot-secondary { background: var(--secondary); }
+.ai-stack-row {
+  display: flex;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.ai-stack-icon {
+  width:40px; height:40px;
+  border-radius: 50%;
+  border: 2px solid var(--surface-dim);
+  background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  margin-left: -8px;
+  color: var(--on-surface);
+}
+.ai-stack-icon:first-child { margin-left: 0; }
+.ai-analytics-row { display: flex; align-items: center; gap: 48px; }
+.ai-analytics-visual {
+  flex: 1; height: 256px;
+  border-radius: 8px;
+  background: var(--surface-low);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ── Proven Impact ─────────────────────────────────────────────────────── */
+.impact-section { background: var(--surface-lowest); padding: var(--section-v) 0; }
+.impact-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 64px; }
+.impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.impact-card-img {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 320px;
+}
+.impact-card-img img { width:100%; height:100%; object-fit:cover; transition:transform 700ms; }
+.impact-card:hover .impact-card-img img { transform: scale(1.1); }
+.impact-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--surface-lowest), transparent);
+  z-index: 1;
+}
+.impact-label { position: absolute; bottom:24px; left:24px; z-index: 2; }
+
+/* ── Trust Section ─────────────────────────────────────────────────────── */
+.trust-section { border-top: 1px solid rgba(255,255,255,0.05); }
+.trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.trust-list { display: flex; flex-direction: column; gap: 32px; }
+.trust-item { display: flex; gap: 24px; }
+.trust-icon {
+  width:48px; height:48px; border-radius:8px; flex-shrink:0;
+  background: var(--surface-high);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.trust-glow-tr {
+  position:absolute; top:-40px; right:-40px;
+  width:160px; height:160px;
+  background:rgba(76,215,246,0.2);
+  filter:blur(60px); border-radius:50%; pointer-events:none;
+}
+.trust-glow-bl {
+  position:absolute; bottom:-40px; left:-40px;
+  width:240px; height:240px;
+  background:rgba(173,198,255,0.2);
+  filter:blur(80px); border-radius:50%; pointer-events:none;
+}
+.terminal-panel { padding: 32px; position: relative; overflow: hidden; }
+
+/* ── CTA ───────────────────────────────────────────────────────────────── */
+.ai-final-cta {
+  border-radius: 24px; padding: 64px;
+  text-align: center; overflow: hidden; position: relative;
+}
+
+/* ── Status indicator ──────────────────────────────────────────────────── */
+.status-dot { width:8px; height:8px; border-radius:50%; background:#22c55e; display:inline-block; }
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ai-bento { grid-template-columns: 1fr; }
+  .ai-card-large, .ai-card-small, .ai-card-full { grid-column: 1; }
+  .impact-grid { grid-template-columns: 1fr; }
+  .trust-grid  { grid-template-columns: 1fr; gap: 48px; }
+  .ai-analytics-row { flex-direction: column; }
+}

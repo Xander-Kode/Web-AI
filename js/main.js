@@ -17,7 +17,7 @@ if (closeMenu && mobileMenu) {
 }
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && mobileMenu.classList.contains('open')) {
+  if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
     mobileMenu.classList.remove('open');
     mobileMenu.setAttribute('aria-hidden', 'true');
   }

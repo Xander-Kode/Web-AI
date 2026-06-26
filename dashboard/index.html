@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clients — Aetheris Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <nav class="dash-nav">
+    <div class="dash-logo">Aetheris AI</div>
+    <div class="dash-user">
+      <span id="user-email"></span>
+      <button id="logout-btn">Sign out</button>
+    </div>
+  </nav>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1>Clients</h1>
+        <p>All accounts, plans, and subscription details</p>
+      </div>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-label">Total Clients</div>
+        <div class="kpi-value" id="kpi-total">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Active</div>
+        <div class="kpi-value" id="kpi-active">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">MRR</div>
+        <div class="kpi-value" id="kpi-mrr">—</div>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <div class="table-toolbar">
+        <h2>All Clients</h2>
+        <button id="add-client-btn">+ Add Client</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Client</th>
+            <th>Plan</th>
+            <th>Monthly</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="clients-tbody">
+          <tr><td colspan="7" class="empty-row">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Add / Edit Modal -->
+  <div class="modal-overlay" id="client-modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modal-title">Add Client</h2>
+        <button id="modal-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <form id="client-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="f-name">Full Name *</label>
+            <input type="text" id="f-name" name="name" required placeholder="Jane Smith">
+          </div>
+          <div class="field">
+            <label for="f-biz">Business Name *</label>
+            <input type="text" id="f-biz" name="business_name" required placeholder="Smith &amp; Co">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="jane@smith.co">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="field">
+            <label for="f-plan">Plan *</label>
+            <select id="f-plan" name="plan">
+              <option value="free">Free — Landing Page</option>
+              <option value="t1">T1 · Digital Storefront</option>
+              <option value="t2">T2 · Informed Owner</option>
+              <option value="t3">T3 · Autonomous Business</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-status">Status</label>
+            <select id="f-status" name="status">
+              <option value="active">Active</option>
+              <option value="paused">Paused</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-monthly">Monthly Amount ($)</label>
+            <input type="number" id="f-monthly" name="monthly_amount" min="0" step="0.01" placeholder="149.00">
+          </div>
+          <div class="field">
+            <label for="f-setup">Setup Fee ($)</label>
+            <input type="number" id="f-setup" name="setup_fee" min="0" step="0.01" placeholder="1500.00">
+          </div>
+          <div class="field">
+            <label for="f-start">Start Date</label>
+            <input type="date" id="f-start" name="start_date">
+          </div>
+          <div class="field">
+            <label for="f-url">Website URL</label>
+            <input type="url" id="f-url" name="website_url" placeholder="https://smithco.com">
+          </div>
+          <div class="field field-full">
+            <label for="f-notes">Notes</label>
+            <textarea id="f-notes" name="notes" placeholder="Any extra context about this client…"></textarea>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="modal-cancel">Cancel</button>
+          <button type="submit" class="btn-save">Save Client</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="../js/supabase-client.js"></script>
+  <script src="../js/dashboard-app.js"></script>
+</body>
+</html>
